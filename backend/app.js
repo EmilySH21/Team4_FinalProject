@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const router = require('./routes/index');
 
 var app = express();
 
@@ -19,6 +20,15 @@ const dbName = 'myDB';
 
 // Create a new MongoClient
 const client = new MongoClient(url);
+
+// Use connect method to connect to the Server
+client.connect(function(err) {
+  console.log("Connected successfully to server");
+
+  const db = client.db(dbName);
+  
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,6 +44,27 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
+router.get('/', function (request, response, next) {
+  res.render('index', { title: 'Express'})
+})
+async function group(client) {
+  const myCollection = client.db('pets').collection('petsCollection')
+  return await myCollection.aggregate(
+    [
+      {
+        $group:
+        {
+          _id: {$species: '$species'},
+          pets: {
+            $push: {
+              id: '$id', imgSrc: '$imgSrc', name: '$name', species: '$species', breed: '$breed', status: '$status', info: '$info'
+            }
+          }
+        }
+      }
+    ]
+  )
+}
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -49,107 +80,39 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const postInfo = [
-  {
-    _id: "dog",
-    pets: [
-      {
-      imgSrc:"https://i.insider.com/5484b33a6da8119577fbada9?width=1300&format=jpeg&auto=webp",
-      name: "Rocky",
-      breed: "American Pit Bull cross",
-      status: "Neutered and vaccinated",
-      info: "Female, 7 years old",
-      adopted: false
-      },
-      {
-      imgSrc: "https://i.insider.com/5484ecba69bedda54703ed52?width=1300&format=jpeg&auto=webp",
-      name: "Juju",
-      breed: "American staff cross",
-      status: "Vaccinated, not neutered",
-      info: "Male, 7 years old",
-      adopted: false
-      },
-      {
-      imgSrc:"https://i.insider.com/5484d9d1eab8ea3017b17e29?width=1300&format=jpeg&auto=webp",
-      name: "Knuckles",
-      breed: "Anatolian Shepherd",
-      status: "Neutered and vaccinated",
-      info: "Male, 1 year old",
-      adopted: false
-      },
-      {
-      imgSrc:"https://i.insider.com/5484e527ecad04de4324638b?width=1200&format=jpeg&auto=webp",
-      name: "Donald",
-      breed: "Anatolian Shepherd",
-      status: "Neutered and vaccinated",
-      info: "Male, 5 year old",
-      adopted: false
-      },
-      {
-      imgSrc: "https://i.insider.com/5484d8fa69bedd616903ed62?width=1200&format=jpeg&auto=webp",
-      name: "Edwarda",
-      breed: "German Shepherd",
-      status: "Neutered and vaccinated",
-      info: "Feale, 2 year old",
-      adopted: false
-      },
-      {
-      imgSrc:"https://i.insider.com/5484b4d06da8113b75fbadb7?width=1200&format=jpeg&auto=webp",
-      name: "Frank",
-      breed: "Shitzhu",
-      status: "Neutered and vaccinated",
-      info: "Male, 1 year old",
-      adopted: false
-      },
-      {
-      imgSrc:"https://i.insider.com/5484ea606da8112e5dfbadab?width=1200&format=jpeg&auto=webp",
-      name: "Hillary",
-      breed: "Pitbull",
-      status: "Neutered and vaccinated",
-      info: "Female, 1 year old",
-      adopted: false
-      },
-    ]
-  },
-  {
-    _id: "cat",
-    pets: [
-    {
-      imgSrc: "https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png",
-      name: "Iridian",
-      breed: "Maine Coon",
-      status: "Neutered and vaccinated",
-      info: "Female, 1 year old",
-      adopted: false
-    },
-    {
-      imgSrc: "https://www.purina.com/sites/g/files/auxxlc196/files/AmericanCurlSHA_body_6.jpg",
-      name: "Jack",
-      breed: "American Curl",
-      status: "Neutered and vaccinated",
-      info: "Female, 1 year old",
-      adopted: false
-    },
-    {
-      imgSrc: "https://www.purina.com/sites/g/files/auxxlc196/files/Birman_body_6.jpg",
-      name: "Karen",
-      breed: "Birman",
-      status: "Neutered and vaccinated",
-      info: "Female, 1 year old",
-      adopted: false
-    }
-  ]
-  }
-];
+// router.route("/fetch").get(function(req, res) {
+//   kennel.find({}, function(err, result) {
+//     if (err) {
+//       res.send(err);
+//     } else {
+//       res.send(result);
+//     }
+//   });
+// });
+
+
+
+
 //This handler I believe is supposed to be called one time using URL (see notion) and it justs gives the array of all the animals
-function browseHandler(request, response) {
+// function browseHandler(request, response) {
 
-  response.status(200)
+//   response.status(200)
   
-	response.json(postInfo)
-}
+	
+// }
 
-app.get('/browse', browseHandler)
+//app.get('/browse', browseHandler)
+
+// function adoptHandler(request, response) {
+
+//   response.status(200)
 
 
-module.exports = app;
+
+//   response.json(postInfo)
+
+// }
+
+
+
+module.exports = app})
