@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.post {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  position: relative;
+  width: 270px;
+  height: 350px;
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: top;
+}
+
+.posts {
+  margin: 50px;
+}
+
+.postImg {
+  width: 270px;
+  height: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
+}
+
+.animalInfo {
+  margin: 20px;
+}
+
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+  padding-left: 115px;
+}
+
+.nav {
+  background:#177cff;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.links {
+  color: #ffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin-right: 100px;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
