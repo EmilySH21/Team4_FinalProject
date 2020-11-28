@@ -10,22 +10,22 @@ const Post = (props) => {
       />
       <div class="animalInfo">
         <p><b>{props.name}</b></p>
-        <span>
+        <span class="petInfo">
           <img class="icon" src="images/animal_icon.jpg" />
           {props.breed}
         </span>
         <br></br>
-       <span>
+       <span class="petInfo">
          <img class="icon" src="images/needle_icon.jpg" />
          {props.status}
       </span> 
       <br></br>
-      <span>
+      <span class="petInfo">
         <img class="icon" src="images/info_icon.jpg" />
         {props.info}
       </span>
       <br></br><br></br>
-        <Link to={props.url}>View more details</Link>
+        <Link class="details" to={props.url}>View more details ↓</Link>
       </div>
     </div>
   );

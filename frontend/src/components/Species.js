@@ -14,10 +14,17 @@ const Species = (props) => {
         />
     ));
 
+    let type = " ";
+    if (props.type == "dog") {
+      type = "Dogs and puppies";
+    } else if (props.type == "cat") {
+      type = "Cats";
+    }
+
   return (
     <div>
-      <h1>{props.type}</h1>
-      <div class="float-container">{posts}</div>
+      <h1>{type}</h1>
+      <div class="flex-container">{posts}</div>
     </div>
   );
 }
