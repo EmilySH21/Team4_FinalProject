@@ -23,8 +23,10 @@ const Species = (props) => {
 
   return (
     <div>
-      <h1>{type}</h1>
-      <div class="flex-container">{posts}</div>
+      <div class="container">
+        <p class="speciesName">{type}</p>
+        <div class="flex-container">{posts}</div>
+      </div>
     </div>
   );
 }
