@@ -8,6 +8,10 @@ const Details = (data) => {
     const adoptMe = () => {
         //this.state = null;
         //document.getElementsByClassName('adopt-me-button').style.color = "grey";
+        if (!available) {
+            document.getElementById('button').innerText = 'Pending Adoption Request';
+        }
+        
         available = !available
         console.log(available)
         console.log("You've been adopted")
@@ -79,7 +83,7 @@ const Details = (data) => {
                 <br></br>
                 </p>
             </div>
-            <button class={available ? "adopt-me-button" : "already-taken"} onclick={adoptMe}>ADOPT ME!</button>
+            <button id = 'lmao' class={available ? "adopt-me-button" : "already-taken"} onClick={(click) => document.getElementById('lmao').innerText = 'Pending Adoption Request'}>ADOPT ME!</button>
         </div>
     );
 }
