@@ -29,7 +29,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://www.publicdomainpictures.net/pictures/40000/velka/happy-dog.jpg",
-            name: 'Juju',
+            name: 'Alice',
             breed: 'American staff cross',
             status: 'Vaccindated, not neutered',
             gender: 'Male',
@@ -38,7 +38,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/a015-helenal-151.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9109afd2bb1008a6defaac8302ef2525",
-            name: 'Juju',
+            name: 'Knuckles',
             breed: 'American staff cross',
             status: 'Vaccindated, not neutered',
             gender: 'Male',
@@ -47,7 +47,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://img.rasset.ie/0015957e-500.jpg",
-            name: 'Juju',
+            name: 'Addie',
             breed: 'American staff cross',
             status: 'Vaccindated, not neutered',
             gender: 'Male',
@@ -56,7 +56,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://visualhunt.com/photos/6/dog-beagle-pet-animal-head-floppy-ears.jpg?s=s",
-            name: 'Juju',
+            name: 'Buster',
             breed: 'American staff cross',
             status: 'Vaccindated, not neutered',
             gender: 'Male',
@@ -65,7 +65,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://s.yimg.com/ny/api/res/1.2/kAEAYNIdLGPkF2PF1NAFGg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYzOS44NA--/https://s.yimg.com/uu/api/res/1.2/FQArkFVb48b.OPYbyJf9qA--~B/aD0xMzMzO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://media.zenfs.com/en/daily_paws_articles_948/1ec8bc43b699e7f68f61a52cbd9bd494",
-            name: 'Juju',
+            name: 'Mercury',
             breed: 'American staff cross',
             status: 'Vaccindated, not neutered',
             gender: 'Male',
@@ -79,7 +79,7 @@ const Adopt = () => {
         pets: [
           {
             imgSrc: "https://burst.shopifycdn.com/photos/beautiful-cat.jpg?width=1200&format=pjpg&exif=0&iptc=0",
-            name: 'Terry',
+            name: 'Chonker',
             breed: 'Domestic medium hair cross',
             status: 'Neutered, not vaccinated',
             gender: 'Male',
@@ -88,7 +88,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://images.freeimages.com/images/small-previews/56b/ragdoll-cat-playing-1635061.jpg",
-            name: 'Chonker',
+            name: 'Gandalf',
             breed: 'Main coone',
             status: 'Status unknown',
             gender: 'Female',
@@ -106,7 +106,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://allaboutpurrs.com/wp-content/uploads/2019/12/silver-tabby-cat-lying-on-brown-wooden-surface-126407.jpg",
-            name: 'Terry',
+            name: 'Lacey',
             breed: 'Domestic medium hair cross',
             status: 'Neutered, not vaccinated',
             gender: 'Male',
@@ -115,7 +115,7 @@ const Adopt = () => {
           },
           {
             imgSrc: "https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-            name: 'Terry',
+            name: 'Kip',
             breed: 'Domestic medium hair cross',
             status: 'Neutered, not vaccinated',
             gender: 'Male',
