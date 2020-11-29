@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
+
 router.get('/', function (request, response, next) {
   res.render('index', { title: 'Express'})
 })
@@ -64,6 +64,8 @@ async function group(client) {
     ]
   )
 }
+module.exports = router;
+// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -111,7 +113,3 @@ app.use(function(err, req, res, next) {
 //   response.json(postInfo)
 
 // }
-
-
-
-module.exports = app
