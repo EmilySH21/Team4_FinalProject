@@ -3,15 +3,51 @@ import {Link} from "react-router-dom";
 
 const Details = (data) => {
 
-    let available = true
+    const [available, setAvailable] = React.useState(data.adopted);
 
     const adoptMe = () => {
+        console.log(available)
+        setAvailable(false)
+    }
+    
+
+    /*const adoptMe = () => {
+        let newData = data.petData;
+        for (var i = 0; i < newData.length; i++) {
+            if (newData[i]._id == data.name) {
+                for (var j = 0; j < newData[i].pets.length; j++) {
+                    if (newData[i].pets[j].name == data.name) {
+                        newData[i].pets[j].adopted = true;
+                        console.log("ADOPTED");
+                    }
+                }
+            }
+        }
+
+        data.setData(newData);
+    } */
         //this.state = null;
         //document.getElementsByClassName('adopt-me-button').style.color = "grey";
-        available = !available
-        console.log(available)
-        console.log("You've been adopted")
-    }
+       /* available = !available
+
+        console.log("You've been adopted")*/
+
+       /* let newData = data.petData.map(function(species, index) {
+            return {
+                species.pets.map(function(pet, index) {
+                    if (pet.name == data.name) {
+                        pet.adopted = !pet.adopted;
+                        console.log("ADOPTED")
+                    }
+                }
+                
+            }
+                
+        });*/
+
+        let buttonText = (available ? "Adopt Me!" : "Awaiting Review");
+
+           
 
     return (
         <div class="petDetails">
@@ -79,11 +115,15 @@ const Details = (data) => {
                 <br></br>
                 </p>
             </div>
+<<<<<<< HEAD
             <button class={available ? "adopt-me-button" : "already-taken"} onClick={() => {
                 available = !available
                 console.log(available)
                 console.log("You've been adopted")
             }}>ADOPT ME!</button>
+=======
+            <button class={available ? "adopt-me-button" : "already-taken"} onClick={adoptMe}>{buttonText}</button>
+>>>>>>> 872454ccf1823fd12aedc6b5abab3872618ec2dc
         </div>
     );
 }
