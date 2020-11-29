@@ -103,8 +103,8 @@
 
 .links {
   margin-right: 10%;
-  display: flex;
-  justify-content: space-between;
+  float: right;
+  
 
 }
 
@@ -112,6 +112,7 @@
   color: #ffff;
   text-decoration: none;
   font-weight: bold;
+  padding-left: 100px;
 }
 
 .logo {
@@ -119,7 +120,7 @@
   text-decoration: none;
   font-weight: bold;
   float: left;
-  margin-right: 50%;
+  
   margin-left: 135px;
 }
 
