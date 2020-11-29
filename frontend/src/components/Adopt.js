@@ -3,8 +3,9 @@ import Post from "./Post";
 import Species from './Species';
 
 
-const Adopt = () => {
-    const postInfo = 
+const Adopt = (props) => {
+
+  /*const [petData, setData] = React.useState(
     [
       {
         _id: 'dog',
@@ -124,23 +125,24 @@ const Adopt = () => {
           }
         ]
       }
-    ];
+    ]);*/
 
-    const [data, setData] = React.useState([]);
 
-    React.useEffect(() => {
+   /* React.useEffect(() => {
       fetch('http://localhost:3001/')
         .then(response => response.json())
         .then(responseAsJSON => 
           setData(responseAsJSON))
           //console.log("Did that work?"))
-    }, [])
+    }, [])*/
 
     //just change postInfo in line 64 to responseAsJSON
-    const postElements = postInfo.map((info, idx) => (
+    const postElements = props.petData.map((info, idx) => (
       <Species 
         type={info._id}
         pets={info.pets}
+        petData={props.petData}
+        setData={props.setData}
       />
     ));   
 

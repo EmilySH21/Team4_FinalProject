@@ -141,6 +141,7 @@ const Description = (props) => {
             if (newname == element['name']) {
                 finaldata = (
                     <Details 
+                        species={newtype}
                         imglink = {element.imgSrc}
                         name = {element.name}
                         breed = {element.breed}
@@ -148,6 +149,8 @@ const Description = (props) => {
                         gender = {element.gender}
                         age = {element.yearsOld}
                         adopted = {element.adopted}
+                        petData = {props.petData}
+                        setData = {props.setData}
                     />
                 );
             }
@@ -157,6 +160,7 @@ const Description = (props) => {
             if (newname == element['name']) {
                 finaldata = (
                     <Details 
+                        species={newtype}
                         imglink = {element.imgSrc}
                         name = {element.name}
                         breed = {element.breed}
@@ -164,6 +168,8 @@ const Description = (props) => {
                         gender = {element.gender}
                         age = {element.yearsOld}
                         adopted = {element.adopted}
+                        petData = {props.petData}
+                        setData = {props.setData}
                     />
                 );
             }
