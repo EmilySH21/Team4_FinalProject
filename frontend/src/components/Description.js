@@ -127,7 +127,6 @@ const Description = (props) => {
     ];
 
 
-    console.log("hello");
     let {id} = useParams();
 
     let newname = id.split("-")[0];

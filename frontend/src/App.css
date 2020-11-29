@@ -36,8 +36,8 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   position: relative;
-  width: 270px;
-  height: 375px;
+  width: 280px;
+  height: 387px;
   display: inline-block;
   margin-right: 10%;
   margin-bottom: 5%;
@@ -60,7 +60,7 @@
 }
 
 .postImg {
-  width: 270px;
+  width: 280px;
   height: 170px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -69,7 +69,7 @@
 .icon {
   width: 25px;
   height: 25px;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 .animalInfo {
@@ -116,7 +116,7 @@
   font-weight: bold;
   float: left;
   margin-right: 50%;
-  margin-left: 5%
+  margin-left: 135px;
 }
 
 
@@ -163,7 +163,7 @@
   margin-top: 0px;
 }
 
-button {
+.adopt-me-button {
   color: white;
   border-radius: 20px;
   background-color: #1293e6;
@@ -171,6 +171,10 @@ button {
   padding: 12px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+.already-taken {
+  background-color: grey;
 }
 
 img.description-image {

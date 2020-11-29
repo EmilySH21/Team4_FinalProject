@@ -2,6 +2,17 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 const Details = (data) => {
+
+    let available = true
+
+    const adoptMe = () => {
+        //this.state = null;
+        //document.getElementsByClassName('adopt-me-button').style.color = "grey";
+        available = !available
+        console.log(available)
+        console.log("You've been adopted")
+    }
+
     return (
         <div class="petDetails">
             <h1 class="petTitle">{data.name}</h1>
@@ -67,8 +78,8 @@ const Details = (data) => {
                 <br></br>
                 <br></br>
                 </p>
-                <button type="button" class="adopt-me-button">ADOPT ME!</button>
             </div>
+            <button class={available ? "adopt-me-button" : "already-taken"} onclick={adoptMe}>ADOPT ME!</button>
         </div>
     );
 }
