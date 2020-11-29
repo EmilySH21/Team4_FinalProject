@@ -5,6 +5,9 @@ const Details = (data) => {
     return (
         <div class="petDetails">
             <h1 class="petTitle">{data.name}</h1>
+            <div>
+                <img src={data.imgSrc} alt='image of pet'></img>
+            </div>
             <div class="petSummary">
                 <img class="icon" src="/images/animal_icon.jpg" />
                 {data.breed}
