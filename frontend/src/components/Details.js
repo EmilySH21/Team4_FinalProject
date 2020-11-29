@@ -29,7 +29,7 @@ const Details = (data) => {
         //this.state = null;
         //document.getElementsByClassName('adopt-me-button').style.color = "grey";
        /* available = !available
-        console.log(available)
+
         console.log("You've been adopted")*/
 
        /* let newData = data.petData.map(function(species, index) {
