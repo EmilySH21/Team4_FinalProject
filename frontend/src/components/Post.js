@@ -7,6 +7,7 @@ const Post = (props) => {
     <div class="post">
       <img class="postImg"
         src={props.imgSrc} 
+        alt='something'
       />
       <div class="animalInfo">
         <p><b>{props.name}</b></p>
