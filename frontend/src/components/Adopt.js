@@ -50,23 +50,24 @@ const Adopt = () => {
       }
     ];
 
+    const [data, setData] = React.useState([]);
 
+    React.useEffect(() => {
+      fetch('http://localhost:3001/')
+        .then(response => response.json())
+        .then(responseAsJSON => 
+          setData(responseAsJSON))
+          //console.log("Did that work?"))
+    }, [])
+
+    //just change postInfo in line 64 to responseAsJSON
     const postElements = postInfo.map((info, idx) => (
       <Species 
         type={info._id}
         pets={info.pets}
       />
-    ));
+    ));   
 
-    const [data, setData] = React.useState([]);
-
-    React.useEffect(() => {
-      fetch('http://localhost:3001/browse')
-        .then(response => response.json())
-        .then(responseAsJSON => console.log(responseAsJSON))
-    }, [])
-
-    //setData(responseAsJSON)
 
     return (
         <>

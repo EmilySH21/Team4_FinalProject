@@ -10,6 +10,11 @@ const router = require('./routes/index');
 
 var app = express();
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 const MongoClient = require('mongodb').MongoClient;
 
 // Connection URL

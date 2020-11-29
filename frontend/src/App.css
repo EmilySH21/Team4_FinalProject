@@ -23,7 +23,7 @@ h1 {
 }
 
 .details {
-  color: #177cff;
+  color: #1293e6;
   font-weight: bold;
   text-decoration: none;
   margin-left: 15%;
@@ -62,7 +62,7 @@ h1 {
 }
 
 .nav {
-  background:#177cff;
+  background:#1293e6;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
@@ -105,4 +105,25 @@ h1 {
   to {
     transform: rotate(360deg);
   }
+}
+
+.petDetails {
+  display: block;
+  padding: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.petTitle {
+  margin-left: 0px;
+}
+
+button {
+  color: white;
+  border-radius: 20px;
+  background-color: #1293e6;
+  border: none;
+  padding: 12px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
