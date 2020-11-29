@@ -115,15 +115,7 @@ const Details = (data) => {
                 <br></br>
                 </p>
             </div>
-<<<<<<< HEAD
-            <button class={available ? "adopt-me-button" : "already-taken"} onClick={() => {
-                available = !available
-                console.log(available)
-                console.log("You've been adopted")
-            }}>ADOPT ME!</button>
-=======
             <button class={available ? "adopt-me-button" : "already-taken"} onClick={adoptMe}>{buttonText}</button>
->>>>>>> 872454ccf1823fd12aedc6b5abab3872618ec2dc
         </div>
     );
 }
