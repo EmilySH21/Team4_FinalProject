@@ -7,6 +7,23 @@
   pointer-events: none;
 }
 
+.aboutImg {
+  width: 100%;
+  height: auto;
+}
+
+.aboutPage {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .post {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
@@ -33,6 +50,7 @@ h1 {
   display: inline-block;
   font-size: 15px;
   margin-bottom: 10px;
+
 }
 
 .postImg {
