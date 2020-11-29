@@ -26,7 +26,7 @@ client.connect(function(err) {
   console.log("Connected successfully to server");
 
   const db = client.db(dbName);
-})
+
 
 
 // view engine setup
@@ -79,6 +79,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
 });
 client.close();
 // router.route("/fetch").get(function(req, res) {
