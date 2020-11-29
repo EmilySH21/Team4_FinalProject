@@ -9,17 +9,17 @@ const Details = (data) => {
                 <img src={data.imgSrc} alt='image of pet'></img>
             </div>
             <div class="petSummary">
-                <img class="icon" src="images/animal_icon.jpg" />
+                <img class="icon" src="/images/animal_icon.jpg" />
                 {data.breed}
             </div>
             <br></br>
             <div class="petSummary">
-                <img class="icon" src="images/needle_icon.jpg" />
+                <img class="icon" src="/images/needle_icon.jpg" />
                 {data.status}
             </div> 
             <br></br>
             <div class="petSummary">
-                <img class="icon" src="images/info_icon.jpg" />
+                <img class="icon" src="/images/info_icon.jpg" />
                 {data.gender + ", " + data.age}
             </div>
             <div class="petParagraph">
