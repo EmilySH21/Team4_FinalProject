@@ -158,6 +158,7 @@ const Description = (props) => {
             if (newname == element['name']) {
                 finaldata = (
                     <Details 
+                        imglink = {element.imgSrc}
                         name = {element.name}
                         breed = {element.breed}
                         status = {element.status}

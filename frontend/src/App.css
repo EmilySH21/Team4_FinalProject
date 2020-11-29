@@ -25,7 +25,6 @@
 }
 
 .speciesName {
-  font-size: 25px;
   font-weight: bold;
   padding: 30px;
   padding-left: 0px;
@@ -161,6 +160,7 @@
 
 .petTitle {
   margin-left: 0px;
+  margin-top: 0px;
 }
 
 button {
@@ -171,4 +171,23 @@ button {
   padding: 12px;
   padding-left: 35px;
   padding-right: 35px;
+}
+
+img.description-image {
+  width: 230px;
+  height: 150px;
+}
+
+.image {
+  padding: 0px;
+}
+
+.all-pets {
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.detail-container{
+  display: flex;
+  margin-left: 0px;
 }
