@@ -80,7 +80,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+client.close();
 // router.route("/fetch").get(function(req, res) {
 //   kennel.find({}, function(err, result) {
 //     if (err) {
