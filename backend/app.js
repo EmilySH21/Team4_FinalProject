@@ -52,7 +52,7 @@ async function group(client) {
     ]
   )
 }
-module.exports = router;
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
@@ -78,6 +78,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+module.exports = app;
 });
 client.close();
 // router.route("/fetch").get(function(req, res) {
